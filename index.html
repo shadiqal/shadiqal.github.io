@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kuliah koding | Web music player </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #f5f5f5">
+
+
+    <!-- Menu Navigasi -->
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark elegant-color-dark scrolling-navbar">
+            <a class="navbar-brand" href="index.html"><strong><a class="text-white" style="font-size: 25px;">kuliah
+                        koding </a> <a class="text-secondary" style="font-size: 20px;">Music web
+                        player</a></strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <ul class="navbar-nav nav-flex-icons md-form form-sm my-0">
+                    <a data-toggle="modal" data-target="#loginPopUp"><button
+                            class="btn btn-outline-light btn-sm my-0">Download</button></a>
+                </ul>
+            </div>
+        </nav>
+    </header><br><br><br>
+    <!-- Menu Navigasi -->
+
+    <!-- Menu play music -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <div class=" text-center">
+                                <div id="judulLagu"></div>
+                            </div>
+                            <p class=" text-center" id="penyanyi"></p>
+                        </div>
+                        <p id="durasi" class="text-right">+ 0:00 </p>
+                        <div class="progress md-progress " style="height: 15px">
+
+                            <div id="progress" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                aria-valuemax="100">
+                            </div>
+                            <p id="durasiWaktu"></p>
+                        </div><br>
+                        <div class="text-center">
+                            <div class="btn-group btn-sm" role="group" aria-label="Basic example">
+                                <button type="button" onclick="previous()" style="border-radius: 100px; margin: 5px;"
+                                    class="btn btn-pink btn-sm  btn-rounded"><i class="fas fa-angle-double-left"
+                                        id="sebelumnya"></i></button>
+                                <button type="button" id="controlPlayPause" onclick="play()"
+                                    style="border-radius: 100px; margin: 5px;" class="btn btn-pink btn-sm btn-rounded"
+                                    id="main"><i class="fas fa-play"></i></button>
+                                <button type="button" onclick="next()" style="border-radius: 100px; margin: 5px;"
+                                    class="btn btn-pink btn-sm  btn-rounded" id="selanjutnya"><i
+                                        class="fas fa-angle-double-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+            </div>
+            <div class="col-md-8 container">
+
+                <div class="card"><br>
+                    <h5 class="text-center" style="font-weight: bolder;">Lagu lainnya</h5>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <div id="playlist">
+
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Menu play music -->
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
+    </script>
+    <script type="text/javascript" src="js/music.js"></script>
+</body>
+
+</html>
